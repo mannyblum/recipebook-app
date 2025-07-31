@@ -1,8 +1,9 @@
 {
-  "name": "recipe-book-app",
+  "name": "recipebook",
   "private": true,
   "version": "0.0.0",
   "main": "src/index.tsx",
+  "types": "src/index.tsx",
   "type": "module",
   "scripts": {
     "dev": "vite",
