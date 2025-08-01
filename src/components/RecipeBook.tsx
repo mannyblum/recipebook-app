@@ -23,7 +23,7 @@ const RecipeBook = () => {
   // const [searchParams, setSearchParams] = useSearchParams();
 
   const { isFetching, isSuccess, isError, data, error, refetch } = useQuery(
-    searchQueryOptions(searchTerm),
+    searchQueryOptions(searchTerm)
   );
 
   const { meal, setMeal } = useMeal();

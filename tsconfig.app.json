@@ -21,7 +21,12 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "recipebook": ["../recipebook/src"] // or whatever path your submodule lives at
+    }
   },
   "include": ["src"]
 }
