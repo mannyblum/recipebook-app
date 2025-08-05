@@ -28,7 +28,7 @@ const RecipeDetails = ({ onClose }: { onClose: () => void }) => {
               {ingredient.trim()}
             </p>
             <p className="text-xs text-gray-500">{measure?.trim()}</p>
-          </li>,
+          </li>
         );
       }
     }
@@ -39,13 +39,13 @@ const RecipeDetails = ({ onClose }: { onClose: () => void }) => {
   return (
     <motion.div
       key="recipe-details"
-      className="z-50 absolute h-full w-full top-0 left-0 bg-amber-50"
+      className="z-50 absolute top-0 left-0 bottom-0 w-[500px] mx-auto bg-amber-50 rounded-2xl overflow-y-scroll"
       initial={{ x: "100vw" }}
       animate={{ x: 0 }}
       exit={{ x: "100vw" }}
       transition={{ duration: 0.3 }}
     >
-      <div className="flex justify-start flex-col h-full w-full sm:w-[95%] md:w-[75%] mx-auto">
+      <div className="flex justify-start flex-col w-full p-8">
         <header className="mx-4 mb-2 flex flex-row items-center justify-between">
           <button
             className="font-bold uppercased flex items-center py-1 px-1 bg-white text-sm border-2 rounded-sm border-black text-black cursor-pointer shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-amber-500 active:shadow-none active:transform active:translate-[2px]"
@@ -211,7 +211,7 @@ const Tab = React.forwardRef<HTMLLIElement, TabProps>(
         </p>
       </li>
     );
-  },
+  }
 );
 
 type SelectorProps = {

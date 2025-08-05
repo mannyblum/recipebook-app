@@ -79,7 +79,7 @@ const RecipeBook = () => {
 
   return (
     <div className="flex flex-col bg-amber-500 h-screen w-full m-auto py-8 relative overflow-y-scroll">
-      <motion.div className="flex justify-start py-4 w-[500px] min-h-[400px] h-full p-8 box-border flex-col grow mx-auto bg-amber-50 border-2 border-amber-900 rounded-2xl">
+      <motion.div className="flex justify-start py-4 w-[500px] min-h-[500px] p-8 box-border flex-col grow mx-auto bg-amber-50 border-2 border-amber-900 rounded-2xl relative">
         <div className="flex justify-center">
           <TextField
             value={inputValue}
@@ -97,13 +97,12 @@ const RecipeBook = () => {
             renderRecipeList()
           )}
         </div>
+        <AnimatePresence mode="wait">
+          {!isEmpty(meal) && (
+            <RecipeDetails key="details" onClose={() => setMeal({} as Meal)} />
+          )}
+        </AnimatePresence>
       </motion.div>
-
-      <AnimatePresence mode="wait">
-        {!isEmpty(meal) && (
-          <RecipeDetails key="details" onClose={() => setMeal({} as Meal)} />
-        )}
-      </AnimatePresence>
     </div>
   );
 };
